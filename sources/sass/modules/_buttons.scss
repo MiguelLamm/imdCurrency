@@ -11,3 +11,6 @@
     font-size: 30px;
     @include LatoThin;
 }
+.btn--ita{
+    @include LatoReg;
+}

@@ -1,7 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i&display=swap');
-$font-button:"Lato", sans-serif;
+$font-reg:"Lato", sans-serif;
+$font-ita:"Lato", sans-serif;
 
 @mixin LatoThin{
     font-weight: 100;
-    font-family: $font-button;
+    font-family: $font-reg;
+}
+@mixin LatoThinI{
+    font-weight: 100;
+    font-family: $font-reg;
+    font-style: italic;
+}
+@mixin LatoLight{
+    font-weight: 300;
+    font-family: $font-reg;
+}
+@mixin LatoLightI{
+    font-weight: 300;
+    font-family: $font-reg;
+    font-style: italic;
+}
+@mixin LatoReg{
+    font-weight: 400;
+    font-family: $font-reg;
+}
+@mixin LatoRegI{
+    font-weight: 400;
+    font-family: $font-reg;
+    font-style: italic;
+}
+@mixin LatoBold{
+    font-weight: 700;
+    font-family: $font-reg;
+}
+@mixin LatoBoldI{
+    font-weight: 00;
+    font-family: $font-reg;
+    font-style: italic;
 }

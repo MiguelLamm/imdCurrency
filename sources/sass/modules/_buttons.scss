@@ -9,6 +9,5 @@
     text-decoration: none;
     background-color: $color-buttonbg;
     font-size: 30px;
-    font-family: $font-button;
-    font-weight: light;
+    @include LatoThin;
 }

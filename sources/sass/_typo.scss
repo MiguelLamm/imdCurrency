@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+$font-button:"Lato", sans-serif;
+
+@mixin fontLato{
+    font-family: $font-button;
+}

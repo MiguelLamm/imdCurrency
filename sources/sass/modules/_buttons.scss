@@ -1,12 +1,12 @@
 .btn{
-    color: white;
-    border-radius: 0.5em;
+    color: $color-white;
+    width: 290px;
+    height: 60px;
     padding: 0.5em 1em;
     display: inline-block;
     margin: 1em;
     text-align: center;
     text-decoration: none;
-    background-color: $color-default;
-    font-size: 20px;
-    font-family: $font-sansserif;
+    background-color: $color-buttonbg;
+    font-size: 30px;
 }

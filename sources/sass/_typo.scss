@@ -34,7 +34,19 @@ $font-ita:"Lato", sans-serif;
     font-family: $font-reg;
 }
 @mixin LatoBoldI{
-    font-weight: 00;
+    font-weight: 700;
     font-family: $font-reg;
     font-style: italic;
+}
+@mixin Splash{
+    font-family: $font-reg;
+    font-weight: 300;
+    font-size: 100px;
+}
+
+@mixin SplashCoin{
+    font-family: $font-reg;
+    font-weight: 400;
+    font-size: 80px;
+    letter-spacing: 5px;
 }

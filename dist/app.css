@@ -1,22 +1,93 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 414px;
+  height: 763px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #171717;
+}
+
+.parent--splash {
+  display: grid;
+  grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
+  grid-template-rows: 20px 114px 157px 52px 50px 77px 60px 39px 60px 107px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.splash--ramm {
+  grid-area: 3/3/4/6;
+}
+
+.splash--logo {
+  grid-area: 5/4/6/5;
+}
+
+.splash--login {
+  grid-area: 7/3/8/6;
+}
+
+.splash--signup {
+  grid-area: 9/3/10/6;
+}
+
 .btn {
   color: #fff;
-  width: 290px;
+  width: 100%;
   height: 60px;
-  padding: 0.5em 1em;
-  display: inline-block;
-  margin: 1em;
+  display: block;
   text-align: center;
   text-decoration: none;
   background-color: #232323;
   font-size: 30px;
-  font-weight: 100;
-  font-family: "Lato", sans-serif;
-}
-
-.btn--ita {
   font-weight: 400;
   font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  border: 2px solid #00ffc7;
+  padding: 10px;
+}
+
+.btn--login {
+  color: #00ffc7;
+}
+
+.btn--signup {
+  color: #232323;
+  background-color: #fff;
+}
+
+#splash-logo {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ramm {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 100px;
+  text-align: center;
+  top: -25px;
+  position: relative;
+  color: #00ffc7;
+  text-shadow: 0 10px 6px rgba(9, 219, 173, 0.5);
+}
+
+.ramm--coin {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+  letter-spacing: 5px;
+  top: -35px;
+  position: relative;
 }
 
 /*# sourceMappingURL=app.css.map */

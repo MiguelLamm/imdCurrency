@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    width: 414px;
+    height: 763px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $color-background;
+}
+
+.parent--splash {
+    display: grid;
+    grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
+    grid-template-rows: 20px 114px 157px 52px 50px 77px 60px 39px 60px 107px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+}
+
+.splash--ramm {
+    grid-area: 3 / 3 / 4 / 6;
+}
+
+.splash--logo {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.splash--login {
+    grid-area: 7 / 3 / 8 / 6;
+}
+
+.splash--signup {
+    grid-area: 9 / 3 / 10 / 6;
+}

@@ -1,0 +1,14 @@
+.ramm{
+    @include title;
+    text-align: center;
+    top: -25px;
+    left: -10px;
+    position: relative;
+    color: $color-green;
+    text-shadow: 0 10px 6px rgba(9,219,173,0.5);
+}
+.ramm--coin{
+    @include subtitle;
+    top: -40px;
+    position: relative;
+}

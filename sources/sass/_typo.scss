@@ -38,15 +38,21 @@ $font-ita:"Lato", sans-serif;
     font-family: $font-reg;
     font-style: italic;
 }
-@mixin Splash{
+@mixin title{
     font-family: $font-reg;
     font-weight: 300;
     font-size: 100px;
 }
 
-@mixin SplashCoin{
+@mixin subtitle{
     font-family: $font-reg;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 60px;
     letter-spacing: 5px;
+}
+
+@mixin btn {
+    font-family: $font-reg;
+    font-size: 14px;
+    font-weight: 400;
 }

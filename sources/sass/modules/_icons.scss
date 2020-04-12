@@ -14,17 +14,3 @@
     top: -40px;
     filter: blur(6px) opacity(0.5);
 }
-.ramm{
-    @include Splash;
-    text-align: center;
-    top: -25px;
-    left: -10px;
-    position: relative;
-    color: $color-green;
-    text-shadow: 0 10px 6px rgba(9,219,173,0.5);
-}
-.ramm--coin{
-    @include SplashCoin;
-    top: -40px;
-    position: relative;
-}

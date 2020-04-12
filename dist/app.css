@@ -40,6 +40,34 @@ body {
   grid-area: 9/3/10/6;
 }
 
+.parent2--splash {
+  display: grid;
+  grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
+  grid-template-rows: repeat(2, 20px) 183px 55px 50px 30px 137px 35px 93px 45px 68px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid2--title {
+  grid-area: 3/3/4/6;
+}
+
+.grid2--logo {
+  grid-area: 5/4/6/5;
+}
+
+.grid2--input {
+  grid-area: 7/3/8/6;
+}
+
+.grid2--ww {
+  grid-area: 8/3/9/6;
+}
+
+.grid2--login {
+  grid-area: 10/3/11/6;
+}
+
 .btn {
   color: #fff;
   width: 100%;

@@ -1,14 +1,17 @@
 *{
     box-sizing: border-box;
 }
-html{
-    width: 414px;
-    height: 763px;
-}
 body{
     margin: 0;
     padding: 0;
     background-color: $color-background;
+    width: 414px;
+    height: 763px;
+    display: block;
+}
+.center{
+    margin: 0 auto;
+    border: 1px solid #fff;
 }
 
 .parent--splash {
@@ -17,7 +20,6 @@ body{
     grid-template-rows: 20px 114px 157px 52px 50px 77px 60px 39px 60px 107px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    
 }
 
 .splash--ramm {

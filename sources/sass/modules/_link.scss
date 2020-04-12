@@ -1,0 +1,8 @@
+.link{
+    text-decoration: none;
+}
+.link--wwV{
+    color: $color-green;
+    @include LatoLight;
+    font-size: 12px;
+}

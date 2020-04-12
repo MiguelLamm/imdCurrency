@@ -49,5 +49,7 @@ body {
     .grid2--title { grid-area: 3 / 3 / 4 / 6; }
     .grid2--logo { grid-area: 5 / 4 / 6 / 5; }
     .grid2--input { grid-area: 7 / 3 / 8 / 6; }
-    .grid2--ww { grid-area: 8 / 3 / 9 / 6; }
+    .grid2--ww { grid-area: 8 / 3 / 9 / 6; 
+        padding-left: 12px;
+        padding-top: 10px;}
     .grid2--login{ grid-area: 10 / 3 / 11 / 6; }

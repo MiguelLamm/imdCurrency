@@ -29,3 +29,9 @@
     @include LatoBold;
     font-size: 30px;
 }
+
+.title{
+    color:$color-green;
+    @include LatoBold;
+    font-size: 20px;
+}

@@ -119,13 +119,14 @@ body {
     padding: 40px;
 }
 
-.grid--mainHist {
+.grid--mainlist {
     grid-area: 5 / 1 / 6 / 4;
-    ul{
+
+    ul {
         list-style: none;
-       border: 1px solid #fff;
     }
-    li{
+
+    li {
         display: grid;
         grid-template-columns: 1fr 78px;
         grid-template-rows: 80px;
@@ -133,19 +134,16 @@ body {
         @include LatoReg;
         font-size: 16px;
         align-items: center;
-        border: 1px solid #fff;
         width: 100%;
     }
-    li >.hist-bedrag{
-        font-size: 20px;
+
+    li>.list-bedrag {
+        font-size: 16px;
+        @include LatoBold;
     }
-    
+
 }
-
-
-
-.nav {
-    grid-area: 6 / 1 / 7 / 4;
+.nav{
     background-color: $color-navbg;
     display: grid;
     grid-template-columns: 40% 20% 40%;
@@ -154,6 +152,56 @@ body {
     position: sticky;
     bottom: 0px;
 }
-
+.nav--main{
+    grid-area: 6 / 1 / 7 / 4;
+   
+}
 
 /*------------------    leader    -------------------*/
+
+.parent--score {
+    display: grid;
+    grid-template-columns: 15px 384px 15px;
+    grid-template-rows: 20px 30px 10px 30px 20px 1fr 60px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid--scoreLogo {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.grid--scoreTitle {
+    grid-area: 4 / 2 / 5 / 3;
+    padding-left: 30px;
+}
+
+.grid--scoreboard {
+    grid-area: 6 / 2 / 7 / 3;
+    ul {
+        list-style: none;
+        border: 1px solid $color-green;
+        padding-left: 30px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 30px 1fr 78px;
+        grid-template-rows: 80px;
+        color: $color-white;
+        @include LatoReg;
+        font-size: 16px;
+        width: 100%;
+        border: 1px solid $color-white;
+        padding-top: 20px;
+    }
+
+    li>.list-bedrag {
+        font-size: 16px;
+        @include LatoBold;
+    }
+}
+
+.nav--score {
+    grid-area: 7 / 1 / 8 / 4;
+}

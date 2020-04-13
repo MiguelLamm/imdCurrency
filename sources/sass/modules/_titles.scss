@@ -20,3 +20,12 @@
     font-size: 33px;
     top: -15px;
 }
+.grid--mainSaldo{
+    color: $color-green;
+    @include LatoLight;
+    font-size: 25px;
+}
+.saldoNumber{
+    @include LatoBold;
+    font-size: 30px;
+}

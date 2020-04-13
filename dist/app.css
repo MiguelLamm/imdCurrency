@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
 }
 
+/*------------------    index    -------------------*/
 .parent--splash {
   display: grid;
   grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
@@ -40,6 +41,7 @@ body {
   grid-area: 9/3/10/6;
 }
 
+/*------------------    login    -------------------*/
 .parent2--splash {
   display: grid;
   grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
@@ -70,6 +72,7 @@ body {
   grid-area: 10/3/11/6;
 }
 
+/*------------------    singup    -------------------*/
 .parent3--splash {
   display: grid;
   grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
@@ -94,6 +97,61 @@ body {
   grid-area: 9/3/10/6;
 }
 
+/*------------------    main    -------------------*/
+.parent--main {
+  display: grid;
+  grid-template-columns: 15px 384px 15px;
+  grid-template-rows: repeat(2, 10px) 30px 273px 1fr 60px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid--mainLogo {
+  grid-area: 3/2/4/3;
+}
+
+.grid--mainSaldo {
+  grid-area: 4/1/5/4;
+  border-bottom: 3px solid #00ffc7;
+  text-align: center;
+  padding: 40px;
+}
+
+.grid--mainHist {
+  grid-area: 5/1/6/4;
+}
+.grid--mainHist ul {
+  list-style: none;
+  border: 1px solid #fff;
+}
+.grid--mainHist li {
+  display: grid;
+  grid-template-columns: 1fr 78px;
+  grid-template-rows: 80px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  align-items: center;
+  border: 1px solid #fff;
+  width: 100%;
+}
+.grid--mainHist li > .hist-bedrag {
+  font-size: 20px;
+}
+
+.nav {
+  grid-area: 6/1/7/4;
+  background-color: #302f2f;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 60px;
+  justify-items: center;
+  position: sticky;
+  bottom: 0px;
+}
+
+/*------------------    leader    -------------------*/
 .btn {
   color: #fff;
   width: 100%;
@@ -149,14 +207,27 @@ body {
   top: -15px;
 }
 
-#splash-logo {
+.grid--mainSaldo {
+  color: #00ffc7;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+}
+
+.saldoNumber {
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+}
+
+.splashlogo {
   width: 50px;
   height: 50px;
   display: block;
   margin: 0 auto;
 }
 
-#splash-logo-shadow {
+.splashlogoshadow {
   width: 50px;
   height: 50px;
   display: block;
@@ -164,6 +235,31 @@ body {
   position: relative;
   top: -40px;
   filter: blur(6px) opacity(0.5);
+}
+
+.splashlogo--small {
+  width: 30px;
+  height: 30px;
+}
+
+.splashlogoshadow--small {
+  width: 30px;
+  height: 30px;
+  top: -30px;
+}
+
+.navImg {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  top: 10px;
+}
+
+.navImg--add {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  top: -10px;
 }
 
 .input {

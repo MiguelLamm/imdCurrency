@@ -12,6 +12,8 @@ body {
     margin: 0 auto;
 }
 
+/*------------------    index    -------------------*/
+
 .parent--splash {
     display: grid;
     grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
@@ -38,31 +40,120 @@ body {
     grid-area: 9 / 3 / 10 / 6;
 }
 
+/*------------------    login    -------------------*/
+
 .parent2--splash {
     display: grid;
     grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
     grid-template-rows: repeat(2, 20px) 183px 55px 50px 30px 137px 35px 93px 45px 68px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
+
+.grid2--title {
+    grid-area: 3 / 3 / 4 / 6;
+}
+
+.grid2--logo {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.grid2--input {
+    grid-area: 7 / 3 / 8 / 6;
+}
+
+.grid2--ww {
+    grid-area: 8 / 3 / 9 / 6;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+
+.grid2--login {
+    grid-area: 10 / 3 / 11 / 6;
+}
+
+/*------------------    singup    -------------------*/
+
+.parent3--splash {
+    display: grid;
+    grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
+    grid-template-rows: 20px 9px 85px 17px 50px 103px 261px 78px 45px 68px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid3--title {
+    grid-area: 3 / 3 / 4 / 6;
+}
+
+.grid3--logo {
+    grid-area: 5 / 4 / 6 / 5;
+}
+
+.grid3--input {
+    grid-area: 7 / 3 / 8 / 6;
+}
+
+.grid3--signup {
+    grid-area: 9 / 3 / 10 / 6;
+}
+
+
+/*------------------    main    -------------------*/
+.parent--main {
+    display: grid;
+    grid-template-columns: 15px 384px 15px;
+    grid-template-rows: repeat(2, 10px) 30px 273px 1fr 60px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid--mainLogo {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.grid--mainSaldo {
+    grid-area: 4 / 1 / 5 / 4;
+    border-bottom: 3px solid $color-green;
+    text-align: center;
+    padding: 40px;
+}
+
+.grid--mainHist {
+    grid-area: 5 / 1 / 6 / 4;
+    ul{
+        list-style: none;
+       border: 1px solid #fff;
+    }
+    li{
+        display: grid;
+        grid-template-columns: 1fr 78px;
+        grid-template-rows: 80px;
+        color: $color-white;
+        @include LatoReg;
+        font-size: 16px;
+        align-items: center;
+        border: 1px solid #fff;
+        width: 100%;
+    }
+    li >.hist-bedrag{
+        font-size: 20px;
     }
     
-    .grid2--title { grid-area: 3 / 3 / 4 / 6; }
-    .grid2--logo { grid-area: 5 / 4 / 6 / 5; }
-    .grid2--input { grid-area: 7 / 3 / 8 / 6; }
-    .grid2--ww { grid-area: 8 / 3 / 9 / 6; 
-        padding-left: 12px;
-        padding-top: 10px;}
-    .grid2--login{ grid-area: 10 / 3 / 11 / 6; }
+}
 
-    .parent3--splash {
-        display: grid;
-        grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
-        grid-template-rows: 20px 9px 85px 17px 50px 103px 261px 78px 45px 68px;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        }
-        
-        .grid3--title { grid-area: 3 / 3 / 4 / 6; }
-        .grid3--logo { grid-area: 5 / 4 / 6 / 5; }
-        .grid3--input{ grid-area: 7 / 3 / 8 / 6; }
-        .grid3--signup{ grid-area: 9 / 3 / 10 / 6; }
+
+
+.nav {
+    grid-area: 6 / 1 / 7 / 4;
+    background-color: $color-navbg;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 60px;
+    justify-items: center;
+    position: sticky;
+    bottom: 0px;
+}
+
+
+/*------------------    leader    -------------------*/

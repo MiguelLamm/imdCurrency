@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Signup | COINcident</title>
+    <link rel="icon" type="image/ico" href="sources/img/favi.ico">
+    <link rel="stylesheet" href="dist/app.css">
+
+</head>
+
+<body>
+    <div class="parent3--splash">
+        <div class="ramm ramm--signup grid3--title">COIN<br> <span class="subtitle subtitle--signup">CIDENT</span></div>
+        <div class="logo logo--signup grid3--logo"> <img src="sources/img/LogoRamm.svg" alt="logo ramm coins" id="splash-logo">
+            <img src="sources/img/LogoRamm.svg" alt="logo ramm coins" id="splash-logo-shadow">
+        </div>
+        <div class="grid3--input">
+            <form action="">
+                <input type="text" id="signup-voornaam" name="signup-voornaam" value="" placeholder="voornaam" class="input input--first">
+                <br>
+                <input type="text" id="signup-naam" name="signup-naam" value="" placeholder="naam" class="input">
+                <br>
+                <input type="text" id="signup-email" name="signup-email" value="" placeholder="email" class="input input">
+                <br>
+                <input type="password" id="signup-ww" name="signup-ww" value="" placeholder="wachtwoord" class="input input--ww">
+                <label class="checkContainer">
+                <input type="checkbox" onclick="myFunction()">
+                <span class="checkmark"></span>
+            </label>
+            </form>
+        </div>
+        <div class="grid3--signup">
+        <input type="submit" value="signup" class="btn btn--signup" id="signup-knop" onclick="hey()">
+    </div>
+    </div>
+    <script>
+       
+        function hey(){
+            alert("welkom!");
+        }
+    </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("signup-ww");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
+    
+</body>

@@ -70,6 +70,30 @@ body {
   grid-area: 10/3/11/6;
 }
 
+.parent3--splash {
+  display: grid;
+  grid-template-columns: 15px 47px 120px 50px 120px 47px 15px;
+  grid-template-rows: 20px 9px 85px 17px 50px 103px 261px 78px 45px 68px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid3--title {
+  grid-area: 3/3/4/6;
+}
+
+.grid3--logo {
+  grid-area: 5/4/6/5;
+}
+
+.grid3--input {
+  grid-area: 7/3/8/6;
+}
+
+.grid3--signup {
+  grid-area: 9/3/10/6;
+}
+
 .btn {
   color: #fff;
   width: 100%;
@@ -114,6 +138,15 @@ body {
   top: -40px;
   position: relative;
   text-align: right;
+}
+
+.ramm--signup {
+  font-size: 42px;
+}
+
+.subtitle--signup {
+  font-size: 33px;
+  top: -15px;
 }
 
 #splash-logo {

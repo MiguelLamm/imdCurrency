@@ -177,7 +177,6 @@ body {
 }
 .grid--scoreboard ul {
   list-style: none;
-  border: 1px solid #00ffc7;
   padding-left: 30px;
 }
 .grid--scoreboard li {
@@ -189,8 +188,6 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   width: 100%;
-  border: 1px solid #fff;
-  padding-top: 20px;
 }
 .grid--scoreboard li > .list-bedrag {
   font-size: 16px;

@@ -143,7 +143,8 @@ body {
     }
 
 }
-.nav{
+
+.nav {
     background-color: $color-navbg;
     display: grid;
     grid-template-columns: 40% 20% 40%;
@@ -152,9 +153,10 @@ body {
     position: sticky;
     bottom: 0px;
 }
-.nav--main{
+
+.nav--main {
     grid-area: 6 / 1 / 7 / 4;
-   
+
 }
 
 /*------------------    leader    -------------------*/
@@ -178,6 +180,7 @@ body {
 
 .grid--scoreboard {
     grid-area: 6 / 2 / 7 / 3;
+
     ul {
         list-style: none;
         padding-left: 30px;
@@ -201,4 +204,59 @@ body {
 
 .nav--score {
     grid-area: 7 / 1 / 8 / 4;
+}
+
+/*------------------    overschrijving    -------------------*/
+
+.parent--check {
+    display: grid;
+    grid-template-columns: 15px 384px 15px;
+    grid-template-rows: 20px 30px 10px 30px repeat(4, 64px) 212px 45px 73px 60px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid--checkLogo {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.grid--checkTitle {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.grid--check {
+    grid-area: 6 / 2 / 9 / 3;
+}
+
+.grid--checkbutton {
+    grid-area: 10 / 2 / 11 / 3;
+}
+
+.nav--check {
+    grid-area: 12 / 1 / 13 / 4;
+}
+
+/*------------------    goedkeuring    -------------------*/
+
+.parent--goed {
+    display: grid;
+    grid-template-columns: 15px 384px 15px;
+    grid-template-rows: 20px 30px 10px 30px 586px 60px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid--goedLogo {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.grid--goedMess {
+    grid-area: 5 / 2 / 6 / 3;
+    padding: 50px;
+    padding-top: 45%;
+    text-align: center;
+}
+
+.nav--goed {
+    grid-area: 6 / 2 / 7 / 3;
 }

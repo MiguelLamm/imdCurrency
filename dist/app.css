@@ -199,6 +199,59 @@ body {
   grid-area: 7/1/8/4;
 }
 
+/*------------------    overschrijving    -------------------*/
+.parent--check {
+  display: grid;
+  grid-template-columns: 15px 384px 15px;
+  grid-template-rows: 20px 30px 10px 30px repeat(4, 64px) 212px 45px 73px 60px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid--checkLogo {
+  grid-area: 2/2/3/3;
+}
+
+.grid--checkTitle {
+  grid-area: 4/2/5/3;
+}
+
+.grid--check {
+  grid-area: 6/2/9/3;
+}
+
+.grid--checkbutton {
+  grid-area: 10/2/11/3;
+}
+
+.nav--check {
+  grid-area: 12/1/13/4;
+}
+
+/*------------------    goedkeuring    -------------------*/
+.parent--goed {
+  display: grid;
+  grid-template-columns: 15px 384px 15px;
+  grid-template-rows: 20px 30px 10px 30px 586px 60px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid--goedLogo {
+  grid-area: 2/2/3/3;
+}
+
+.grid--goedMess {
+  grid-area: 5/2/6/3;
+  padding: 50px;
+  padding-top: 45%;
+  text-align: center;
+}
+
+.nav--goed {
+  grid-area: 6/2/7/3;
+}
+
 .btn {
   color: #fff;
   width: 100%;
@@ -274,6 +327,20 @@ body {
   font-size: 20px;
 }
 
+.message {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+
+.message--goed {
+  color: #00ffc7;
+}
+
+.message--error {
+  color: #ff003d;
+}
+
 .splashlogo {
   width: 50px;
   height: 50px;
@@ -314,6 +381,11 @@ body {
   height: 55px;
   position: relative;
   top: -10px;
+}
+
+#goedIcon {
+  width: 50px;
+  height: 50px;
 }
 
 .input {

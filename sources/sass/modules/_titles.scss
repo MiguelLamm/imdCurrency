@@ -35,3 +35,14 @@
     @include LatoBold;
     font-size: 20px;
 }
+.message{
+    font-size: 20px;
+    @include LatoReg;
+}
+
+.message--goed{
+    color: $color-green;
+}
+.message--error{
+    color: $color-red;
+}

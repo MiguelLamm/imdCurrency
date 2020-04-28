@@ -1,11 +1,9 @@
-var btnSignup = document.querySelector('.btn--signup').addEventListener("click", ()=>{
-    let userFname = document.querySelector('#signup-voornaam').value;
-    let userLname = document.querySelector('#signup-naam').value;
-    let email = document.querySelector('#signup-email').value;
-    let password = document.querySelector('#signup-ww').value;
+var btnLogin = document.querySelector('.btn--login').addEventListener("click", ()=>{
+    let email = document.querySelector('#login-email').value;
+    let password = document.querySelector('#login-ww').value;
 
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch('http://localhost:3000/users/login', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'

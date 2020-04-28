@@ -1,13 +1,11 @@
-fetch(base_url + "/api/v1/todos", {
+fetch("http://localhost:3000/api/v1/transfer",{
     'headers': {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
+        'Authorization':'Bearer '+ localStorage.getItem('token')
     }
-}).then(result => {
+}).then(result =>{
     return result.json();
 }).then(json => {
-    json.data.transfer.forEach(transfer => {
-
-        console.log(transfer.amount);
-    
-    });
+    console.log(json);
+}).catch(err => {
+    console.log("error");
+});

@@ -16,9 +16,17 @@ var btnSignup = document.querySelector('.btn--signup').addEventListener("click",
         })
     }).then(response => {
         return response.json();
+        
     }).then(json => {
-        if (json.status === "succes"){
-           
+        if (json.status == "success"){
+            alert('succes');
+           window.location.href= "main.html";
         }
+
+        else if (json.status == "error"){
+            alert('error');
+         }
     })
 });
+ //let token = json.data.token;
+           //localStorage.setItem("token", token);

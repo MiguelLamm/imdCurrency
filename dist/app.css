@@ -491,6 +491,14 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.green {
+  color: #00ffc7;
+}
+
+.red {
+  color: #ff003d;
+}
+
 .link {
   text-decoration: none;
 }

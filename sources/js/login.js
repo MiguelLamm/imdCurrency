@@ -9,7 +9,7 @@ var btnLogin = document.querySelector('.btn--login').addEventListener("click", (
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "username": email,
+            "email": email,
             "password": password
         })
     }).then(response => {

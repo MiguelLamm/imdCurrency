@@ -22,13 +22,15 @@
                 <br>
                 <input type="text" id="signup-naam" name="signup-naam" value="" placeholder="naam" class="input">
                 <br>
-                <input type="text" id="signup-email" name="signup-email" value="" placeholder="email" class="input input">
+                <input type="email" id="signup-email" name="signup-email" value="" placeholder="email" class="input input">
                 <br>
-                <input type="password" id="signup-ww" name="signup-ww" value="" placeholder="wachtwoord" class="input input--ww">
+                <input type="password" id="signup-ww" name="signup-ww" value="" placeholder="wachtwoord" class="input input--ww" minlength="3">
+                
                 <label class="checkContainer">
-                <input type="checkbox" onclick="myFunction()">
-                <span class="checkmark"></span>
-            </label>
+                  <input type="checkbox" onclick="myFunction()">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="hidden errormessage">Er ging iets mis, probeer opnieuw</label>
             </form>
         </div>
         <div class="grid3--signup">

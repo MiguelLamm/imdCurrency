@@ -86,3 +86,11 @@
     border-width: 0 3px 3px 0;
    
   }
+  .hidden{
+    display: none;
+  }
+  .show{
+    display: block;
+    color: $color-red;
+    @include LatoReg;
+  }

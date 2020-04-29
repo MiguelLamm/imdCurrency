@@ -480,6 +480,17 @@ body {
   border-width: 0 3px 3px 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  color: #ff003d;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+
 .link {
   text-decoration: none;
 }

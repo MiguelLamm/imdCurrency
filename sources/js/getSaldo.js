@@ -14,12 +14,13 @@ fetch("http://localhost:3000/api/v1/transfer", {
 
     //json.data.transfers.forEach(transfer => {
     let alledata = json.data.transfers;
-    console.log(alledata);
-    for (let i = 0; i < alledata.length; i++) {
+    console.log(json.requester);
 
-        if (alledata[i].from != "test testing") {
+//for (let i = 0; i < alledata.length; i++) {
+for (let i = alledata.length-1; i >= 0 ; i--) {
+        if (alledata[i].from != json.requester) {
             let newTransfer = ` <li>
-        <p class="list-naam">${json.data.transfers[i].to}</p>
+        <p class="list-naam">${json.data.transfers[i].from}</p>
         <p class="list-bedrag green">+ €${json.data.transfers[i].amount}</p>
     </li>`;
 
@@ -43,6 +44,14 @@ fetch("http://localhost:3000/api/v1/transfer", {
 
 let showData = (json) => {
     let saldo = document.querySelector(".saldoNumber");
-    saldo.textContent = "€ " + json.total;
+    if (json.total < 0){
+        saldo.className="saldoNumber red";
+        saldo.textContent = "€ " + json.total;
+    }
+    else{
+        saldo.className="saldoNumber";
+        saldo.textContent = "€ " + json.total;
+    }
+   
 
 }

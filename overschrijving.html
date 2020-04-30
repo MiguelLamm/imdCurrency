@@ -16,20 +16,24 @@
             <img src="sources/img/LogoRamm.svg" alt="logo ramm coins" class="splashlogoshadow splashlogoshadow--small">
         </div>
         <div class="grid--checkTitle">
-            <h3 class="title">Scorebord</h3>
+            <h3 class="title">Overscrijving</h3>
         </div>
         <div class="grid--check">
-           <input type="text" class="input" placeholder="naar"><br>
-           <input type="number" class="input" placeholder="bedrag"><br>
-           <select name="" id="" class="input">
+           <input type="text" class="input" placeholder="naar" id="transTo"><br>
+           <input type="number" class="input" placeholder="bedrag" id="transAmount"><br>
+           <select name="" id="transMess" class="input">
             <option value="">reden</option>
                <option value="donatie">donatie</option>
                <option value="terugbetaling lunch">terugbetaling lunch</option>
-               <option value="vrije medeling">vrije mededeling</option>
+               <option value="vrije medeling" id="vrij">vrije mededeling</option>
            </select>
+          <!--<input type="textarea" id="textarea">--> 
+          <label class="hidden errormessage">Er ging iets mis, probeer opnieuw</label>
         </div>
+        
         <div class="grid--checkbutton">
-            <button class="btn">verzenden</button>
+            
+            <button class="btn btn--trans">verzenden</button>
         </div>
         <div class="nav nav--check">
             <a href="main.html"><img src="sources/img/nav_home.svg" alt="nav home" class="navImg navImg--home"></a>
@@ -38,6 +42,8 @@
                     class="navImg navImg--leader"></a>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="sources/js/createTrans.js"></script>
 </body>
 
 </html>

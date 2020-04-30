@@ -53,5 +53,7 @@ let showData = (json) => {
         saldo.textContent = "€ " + json.total;
     }
    
+    let nickname =document.querySelector("#nickname");
+    nickname.textContent= json.requester;
 
 }

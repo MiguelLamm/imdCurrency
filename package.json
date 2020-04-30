@@ -19,5 +19,8 @@
   "homepage": "https://github.com/MiguelLamm/imdCurrency#readme",
   "dependencies": {
     "sass": "^1.26.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

@@ -1,5 +1,5 @@
 var btnSignup = document.querySelector('.btn--signup').addEventListener("click", () => {
-
+    const base_url = "http://localhost:3000";
     let email = document.querySelector('#signup-email').value;
     const substring = "@student.thomasmore.be";
     if (email.includes(substring) == true) {
@@ -15,7 +15,7 @@ var btnSignup = document.querySelector('.btn--signup').addEventListener("click",
 
         if (passlength > 3) {
             console.log("processing");
-            fetch('http://localhost:3000/users/signup', {
+            fetch(base_url+'/users/signup', {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json'

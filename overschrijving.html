@@ -16,10 +16,12 @@
             <img src="sources/img/LogoRamm.svg" alt="logo ramm coins" class="splashlogoshadow splashlogoshadow--small">
         </div>
         <div class="grid--checkTitle">
-            <h3 class="title">Overscrijving</h3>
+            <h3 class="title">Overscrhijving</h3>
         </div>
         <div class="grid--check">
-           <input type="text" class="input" placeholder="naar" id="transTo"><br>
+           <input type="text" class="input" placeholder="naar" id="transTo" list="namelist"><datalist id="namelist">
+               <option value="">test</option>
+           </datalist><br>
            <input type="number" class="input" placeholder="bedrag" id="transAmount"><br>
            <select name="" id="transMess" class="input">
             <option value="">reden</option>

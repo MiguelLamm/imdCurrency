@@ -13,9 +13,6 @@ fetch(base_url +"/api/v1/transfer", {
 
     //json.data.transfers.forEach(transfer => {
     let alledata = json.data.transfers;
-    console.log(json.total);
-   
-    console.log(json);
     //for (let i = 0; i < alledata.length; i++) {
     for (let i = alledata.length-1; i >= 0 ; i--) {
         if (alledata[i].from != json.requester) {
@@ -37,47 +34,32 @@ fetch(base_url +"/api/v1/transfer", {
     };
     if (json.status === "success") {
         showData(json);
-        updateleader(json);
+        //updateleader(json);
         console.log("succesvol");
-    }
-    /*fetch('http://localhost:3000/leaderboard', {
-        method: "post",
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + localStorage.getItem('token')
-        },
-        body: JSON.stringify({
-            "email": email,
-            "password": password
-        })
-    }).then(response => {
-        return response.json();
-        
-    }).then(json => {
-        if (json.status == "success"){
-            let token = json.data.token;
-            localStorage.setItem("token", token);
-            window.location.href= "main.html";
-        }
-
-        else if (json.status == "error"){
-            alert('error');
-         }
-    })*/
-});
-
-let updateleader = (json) => {
-    fetch(base_url +"/leaderboard", {
-        'headers': {
-            'Authorization': 'Bearer ' + localStorage.getItem('token')
-        }
-    }).then(result => {
-        return result.json();
+        fetch(base_url+ '/leaderboard', {
+            method: "put",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            },
+            body: JSON.stringify({
+                "totalAmount":json.total
+            })
+        }).then(response => {
+            return response.json();
+            
+        }).then(json => {
+            if (json.status == "success"){
+                console.log("hellow");
+                console.log(json);
+            }
     
-    }).then(json => {
-    console.log(json);
-    })
-}
+            else if (json.status == "error"){
+                alert('error');
+             }
+        })
+    }
+});
 
 let showData = (json) => {
     let saldo = document.querySelector(".saldoNumber");

@@ -100,3 +100,25 @@
   .red {
     color: $color-red;
   }
+  .textareashow{
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 12px;
+    border: 2px solid $color-green;
+    background-color: $color-formbg;
+    color: $color-white;
+    @include LatoReg;
+    display: block;
+  }
+  .textareahidden{
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 12px;
+    border: 2px solid $color-green;
+    background-color: $color-formbg;
+    color: $color-white;
+    @include LatoReg;
+    display: none;
+  }

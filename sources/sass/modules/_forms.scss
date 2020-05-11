@@ -89,6 +89,14 @@
   .hidden{
     display: none;
   }
+  .hidden-message {
+    @include LatoLightI;
+    color: $color-formbg;
+  }
+  .show-message {
+    @include LatoLightI;
+    color: $color-white;
+  }
   .show{
     display: block;
     color: $color-red;

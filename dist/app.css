@@ -484,6 +484,20 @@ body {
   display: none;
 }
 
+.hidden-message {
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  color: #434343;
+}
+
+.show-message {
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  color: #fff;
+}
+
 .show {
   display: block;
   color: #ff003d;

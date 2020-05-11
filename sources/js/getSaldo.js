@@ -54,7 +54,11 @@ let appendT = (json)=> {
             if (alledata[i].from != json.requester) {
                 let newTransfer = ` <li id = '${json.data.transfers[i]._id}'>
             <p class="list-naam">${json.data.transfers[i].from}</p>
+            
             <p class="list-bedrag green">+ €${json.data.transfers[i].amount}</p>
+            <p class="hidden hidden-message">${json.data.transfers[i]._id}</p>
+            <p class="hidden hidden-message">${json.data.transfers[i].message}</p>
+           
              </li>`;
     
                 document.querySelector(".mainlist-history ").insertAdjacentHTML('beforeend', newTransfer);
@@ -63,6 +67,8 @@ let appendT = (json)=> {
                 let newTransfer = ` <li id = '${json.data.transfers[i]._id}'>
                 <p class="list-naam">${json.data.transfers[i].to}</p>
                 <p class="list-bedrag red">- €${json.data.transfers[i].amount}</p>
+                <p class="hidden hidden-message">${json.data.transfers[i]._id}</p>
+                <p class="hidden hidden-message">${json.data.transfers[i].message}</p>
             </li>`;
     
                 document.querySelector(".mainlist-history ").insertAdjacentHTML('beforeend', newTransfer);

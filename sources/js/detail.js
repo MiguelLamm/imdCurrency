@@ -1,32 +1,19 @@
 
 let liId = document.querySelector('.mainlist-history');
-let ID = 0;
-
+let sw = 0;
 liId.addEventListener('click',(e) =>{
     if(e.target && e.target.nodeName == "LI") {
-       //console.log('detail.html/'+e.target.id );
-       window.location.href = "detail.html";
-       ID  = e.target.id;
-       //console.log(ID);
-      fetchDetails(ID);
+       console.log(e.target.id );
+       let nodes = document.getElementById(e.target.id).childNodes;
+       if(sw === 1){
+       nodes[5].className = "show-message";
+       nodes[7].className = "show-message";
+       sw = 0;
+       }
+       else if(sw === 0){
+        nodes[5].className = "hidden";
+        nodes[7].className = "hidden";
+        sw = 1;
+       }
     }
 });
-
-
-let fetchDetails = (ID) => {
-    console.log(ID);
-}
-/*
- let url = "http://localhost:3000";
-    fetch(url +"/api/v1/transfer/"+ID, {
-    'headers': {
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
-    }
-}).then(result => {
-    return result.json();
-
-}).then(json => {
-    
-console.log(json);
-    
-});*/

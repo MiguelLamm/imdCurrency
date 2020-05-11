@@ -3,7 +3,13 @@ if (!localStorage.getItem("token")) {
 }
 const base_url = "http://localhost:3000";
 //GET USERS VOOR INPUT FORM
-
+primus = Primus.connect(base_url, {
+    reconnect: {
+        max: Infinity // Number: The max delay before we try to reconnect.
+      , min: 500 // Number: The minimum delay before we try reconnect.
+      , retries: 10 // Number: How many times we should try to reconnect.
+    }
+  });
 let users=[];
 fetch(base_url+ '/leaderboard', {
     headers: {
@@ -63,14 +69,11 @@ let btnTrans = document.querySelector('.btn--trans').addEventListener("click", (
                     return response.json();
                     
                 }).then(json => {
-                    if (json.status == "success"){
-                       
-                        window.location.href= "main.html";
-                    }
-            
-                    else if (json.status == "error"){
-                        alert('error');
-                     }
+                    primus.write({
+                        "action": "addT",
+                        "data":json
+                    })
+                    redirectA(json);
                 })
             }
             else if(message!="11"){
@@ -89,14 +92,11 @@ let btnTrans = document.querySelector('.btn--trans').addEventListener("click", (
                     return response.json();
                     
                 }).then(json => {
-                    if (json.status == "success"){
-                       
-                        window.location.href= "main.html";
-                    }
-            
-                    else if (json.status == "error"){
-                        alert('error');
-                     }
+                    primus.write({
+                        "action": "addT",
+                        "data":json
+                    })
+                    redirectA(json);
                 })
             }else{
                 document.querySelector(".hidden").className = "show";
@@ -110,3 +110,13 @@ let btnTrans = document.querySelector('.btn--trans').addEventListener("click", (
         document.querySelector(".hidden").className = "show";
     }
 });
+redirectA = (json)=> {
+    if (json.status == "success"){
+                        
+        window.location.href= "main.html";
+    }
+
+    else if (json.status == "error"){
+        alert('error');
+     }
+}

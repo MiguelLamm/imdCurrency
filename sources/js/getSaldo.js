@@ -45,8 +45,10 @@ let addrecent = (json) => {
     });
 };
 let appendT = (json)=> {
+    
     //json.data.transfers.forEach(transfer => {
         let alledata = json.data.transfers;
+        console.log(alledata);
         //for (let i = 0; i < alledata.length; i++) {
         for (let i = alledata.length-1; i >= 0 ; i--) {
             if (alledata[i].from != json.requester) {
@@ -58,7 +60,7 @@ let appendT = (json)=> {
                 document.querySelector(".mainlist-history ").insertAdjacentHTML('beforeend', newTransfer);
     
             } else {
-                let newTransfer = ` <li>
+                let newTransfer = ` <li id = '${json.data.transfers[i]._id}'>
                 <p class="list-naam">${json.data.transfers[i].to}</p>
                 <p class="list-bedrag red">- €${json.data.transfers[i].amount}</p>
             </li>`;
@@ -108,9 +110,3 @@ let showData = (json) => {
     nickname.textContent= json.requester;
 
 }
-let liId = document.querySelector('.mainlist-history');
-liId.addEventListener('click',function(e){
-    if(e.target && e.target.nodeName == "LI") {
-        console.log(e.target.id + " was clicked");
-    }
-} )

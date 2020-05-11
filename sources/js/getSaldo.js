@@ -50,7 +50,7 @@ let appendT = (json)=> {
         //for (let i = 0; i < alledata.length; i++) {
         for (let i = alledata.length-1; i >= 0 ; i--) {
             if (alledata[i].from != json.requester) {
-                let newTransfer = ` <li>
+                let newTransfer = ` <li id = '${json.data.transfers[i]._id}'>
             <p class="list-naam">${json.data.transfers[i].from}</p>
             <p class="list-bedrag green">+ €${json.data.transfers[i].amount}</p>
              </li>`;

@@ -108,3 +108,9 @@ let showData = (json) => {
     nickname.textContent= json.requester;
 
 }
+let liId = document.querySelector('.mainlist-history');
+liId.addEventListener('click',function(e){
+    if(e.target && e.target.nodeName == "LI") {
+        console.log(e.target.id + " was clicked");
+    }
+} )

@@ -2,6 +2,17 @@ if (!localStorage.getItem("token")) {
     window.location.href = "index.html";
 }
 const base_url = "http://localhost:3000";
+
+primus = Primus.connect(base_url, {
+    reconnect: {
+        max: Infinity // Number: The max delay before we try to reconnect.
+      , min: 500 // Number: The minimum delay before we try reconnect.
+      , retries: 10 // Number: How many times we should try to reconnect.
+    }
+  });
+
+
+
 fetch(base_url +"/api/v1/transfer", {
     'headers': {
         'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -10,6 +21,12 @@ fetch(base_url +"/api/v1/transfer", {
     return result.json();
 
 }).then(json => {
+
+
+    primus.write({
+        "action":  "get transfers",
+        "data": json
+    })
 
     //json.data.transfers.forEach(transfer => {
     let alledata = json.data.transfers;

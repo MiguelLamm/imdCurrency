@@ -1,7 +1,7 @@
 if (!localStorage.getItem("token")) {
     window.location.href = "index.html";
 }
-const base_url = "http://localhost:3000";
+const base_url = "https://coincident-app-ramm.herokuapp.com";
 
 primus = Primus.connect(base_url, {
     reconnect: {

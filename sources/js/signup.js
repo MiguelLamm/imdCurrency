@@ -1,5 +1,5 @@
 var btnSignup = document.querySelector('.btn--signup').addEventListener("click", () => {
-    const base_url = "http://localhost:3000";
+    const base_url = "https://coincident-app-ramm.herokuapp.com";
     let email = document.querySelector('#signup-email').value;
     const substring = "@student.thomasmore.be";
     if (email.includes(substring) == true) {

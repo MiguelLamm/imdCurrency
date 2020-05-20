@@ -2,7 +2,7 @@ let btnLogin = document.querySelector('.btn--login').addEventListener("click", (
     let email = document.querySelector('#login-email').value;
     let password = document.querySelector('#login-ww').value;
 
-    const base_url = "http://localhost:3000";
+    const base_url = "https://coincident-app-ramm.herokuapp.com";
     fetch(base_url + '/users/login', {
         method: "post",
         headers: {

@@ -1,11 +1,8 @@
-const { src, dest } = require('gulp');
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
-sass2css = function(){
-  return src('sources/sass/app.scss')
-  .pipe(sass().on('error', sass.logError))
-  .pipe(dest('dist/app.css'));
-}
-exports.default = function(){
-  watch("./sources/sass/**/*.scss", sass2css);
-};
+const imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+
+gulp.task('default', () => {
+  gulp.src('./sources/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/img/'))
+});
